@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;                 /* ขยายความกว้าง */
+    max-width: 1200px;         /* กำหนดความกว้างสูงสุด */
+    margin: auto;
+    padding: 20px;
+}
+h1 {
+    margin-bottom: 20px;
+}
+
+/* การ์ดแดชบอร์ดขยายให้ใหญ่ขึ้น */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));     /* ปรับขนาดอัตโนมัติ */
+    gap: 10px;               /* เพิ่มระยะห่าง */
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 15px;          /* เพิ่มพื้นที่ข้างในการ์ด */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.chart-container {
+    background: white;
+    padding: 20px;          /* ปรับขนาดปุ่ม */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    height: 300px;
+}
+
+.clean-button {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.On-button {
+    background: green;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Off-button {
+    background: gray;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cleanStop-button {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

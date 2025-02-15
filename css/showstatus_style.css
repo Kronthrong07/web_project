@@ -51,33 +51,102 @@ h1 {
     cursor: pointer;
 }
 
-.On-button {
-    background: green;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.Off-button {
-    background: gray;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .cleanStop-button {
     background: black;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 40px;
     cursor: pointer;
+    width: 200px;
+    height: 60px;
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้ราบรื่น */
 }
 
+.cleanStop-button:hover {
+    background: #333; /* เปลี่ยนพื้นหลังให้เข้มขึ้นเมื่อวางเมาส์ */
+    transform: translateY(4px); /* ทำให้ปุ่มดูเหมือนกดลง */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูเหมือนปุ่มกด */
+}
+
+.Order-button {
+    background: gray;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงให้ราบรื่น */
+}
+
+.Order-button:hover {
+    background: #555; /* เปลี่ยนพื้นหลังให้เข้มขึ้นเมื่อวางเมาส์ */
+    transform: translateY(4px); /* ทำให้ปุ่มดูเหมือนกดลง */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูเหมือนปุ่มกด */
+}
+
+.toggle-1 {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 0 0;
+}
+
+.toggle-1__input {
+    display: none;
+}
+
+.toggle-1__button {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 20px;
+
+    width: 200px;
+    height: 60px;
+    color: white;
+    background-color: #f2395a;
+    border: solid 1px #f2395a;
+    box-shadow: 0 0 12px rgba(255, 61, 94, 0.5);
+    border-radius: 30px;
+    transition: all 0.3 ease;
+}
+
+.toggle-1__button::before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    top: 10px;
+    left: 95px;
+    height: 30px;
+    padding: 0 10px;
+  
+    content: "off";
+    background: white;
+    color: #f2395a;
+    transition: all 0.3s ease;
+    width: 80px;
+    height: 40px;
+  }
+
+  .toggle-1__input:checked + .toggle-1__button {
+    background: #8ECF45;
+    border: solid 1px #8ECF45;
+    box-shadow: 0 2px 20px rgba(142, 207, 69, 0.5);
+    border-radius: 30px;
+}
+
+.toggle-1__input:checked + .toggle-1__button::before {
+    content: 'on';
+    left: 5px;
+    color:#8ECF45;
+}

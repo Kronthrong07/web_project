@@ -61,3 +61,40 @@ input[type="date"], input[type="time"], input[type="text"], select {
 .save-button:hover {
     background: #45a049;
 }
+
+.selection-container {
+    position: relative;
+    padding: 10px;
+    width: 100%; /* ปรับขนาดตามต้องการ */
+}
+
+.selection-container select {
+    width: 20%;
+    height: 40px;
+    padding: 10px;
+    background: transparent;
+    font-size: 16px;
+    appearance: none;               /* ลบสไตล์ dropdown เริ่มต้น */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* ลูกศรอยู่ด้านข้างขวา */
+.selection-container::after {
+    content: "▼";                            /* ไอคอนลูกศร */
+    font-size: 14px;
+    color: #000;
+    position: absolute;
+    right: 430px;                           /* ปรับตำแหน่งให้ชิดขวา */
+    top: 50%;
+    transform: translateY(-50%);           /* จัดให้ลูกศรอยู่ตรงกลางแนวตั้ง */
+    pointer-events: none;               /* ป้องกันการคลิกที่ลูกศร */
+}
+
+

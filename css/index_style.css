@@ -247,6 +247,7 @@
   text-align: center;
   text-align-last: center; /* ทำให้ข้อความอยู่ตรงกลาง */
   padding: 10px;
+  outline: none;
 }
 
 /* ปุ่มลูกศรขยาย */
@@ -260,7 +261,7 @@
 /* เมื่อ Hover หรือ Focus ให้แสดงกรอบ */
 .select-container:hover,
 .select-container select:focus {
-  border: 2px solid #575757;
+  border: none;
   transition: all 0.3s ease-in-out;
 }
 
